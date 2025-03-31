@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7a5f3e439d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="circle">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="circle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            <img src="media/photo.png" class="song-img" alt="Song Artwork">
+            <h1 id="song-title">Kasturi</h1>
+            <p id="song-artist">Arijit Singh, Prasad S, Kunnal Verma</p>
+            <audio id="song">
+                <source src="media/Kasturi_64(PagalWorld.com.sb).mp3" type="audio/mpeg">
+                <source src="media/new_320_Wishlist - Dino James.mp3" type="audio/mpeg">
+                <source src="media/Sweetheart - Kedarnath 2019 320KBPS.mp3" type="audio/mpeg">
+            </audio>
+            <input type="range" value="0" id="progress">
+
+            <!-- Volume Control -->
+            <input type="range" id="volume" value="100" max="100" step="1" />
+            <p id="volume-display">100%</p>
+
+            <!-- Controls Section -->
+            <div class="controls">
+                <div onclick="prevSong()">
+                    <i class="fa-solid fa-backward"></i>
+                </div>
+                <div onclick="playpause()">
+                    <i class="fa-solid fa-play" id="ctrlIcon"></i>
+                </div>
+                <div onclick="nextSong()">
+                    <i class="fa-solid fa-forward"></i>
+                </div>
+            </div>
+
+            <!-- Mute Button -->
+            <div onclick="toggleMute()">
+                <i class="fa-solid fa-volume-xmark" id="mute-icon"></i>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
